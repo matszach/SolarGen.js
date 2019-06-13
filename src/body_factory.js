@@ -5,7 +5,7 @@ function buildStarFromData(StarData){
 
     name = StarData.name;
     radius = StarData.min_real_rad + (StarData.max_real_rad - StarData.min_real_rad) * range;
-    mass = StarData.min_mass + (StarData.max_mass - StarData.min_mass) * range;
+    mass = 4/3 * Math.PI * radius*radius*radius * StarData.density;
     temp = StarData.min_temp + (StarData.max_temp - StarData.min_temp) * range;
 
     star = new Star(name, radius, mass, temp);
@@ -25,7 +25,7 @@ function buildSateliteFromData(SateliteData){
 
     name = SateliteData.name;
     radius = SateliteData.min_real_rad + (SateliteData.max_real_rad - SateliteData.min_real_rad) * range;
-    mass = SateliteData.min_mass + (SateliteData.max_mass - SateliteData.min_mass) * range;
+    mass = 4/3 * Math.PI * radius*radius*radius * SateliteData.density;
     temp = SateliteData.min_temp + (SateliteData.max_temp - SateliteData.min_temp) * range;
 
     satelite = new Satelite(name, radius, mass, temp);
