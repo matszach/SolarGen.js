@@ -17,12 +17,14 @@ function init(){
     for(i=0; i<nof_planets; i++){
 
         pl = buildSateliteFromData(randPlanetData());
+        // pl.r = i * 30 + 90
         central_body.satelites.push(pl);
 
-        nof_moons = Math.random()*6 - 3;
+        nof_moons = Math.random()*5 - 2;
 
         for(j=0; j<nof_moons; j++){
             mn = buildSateliteFromData(randMoonData());
+            // mn.r = j * 10 + 20
             pl.satelites.push(mn);
         }
     }

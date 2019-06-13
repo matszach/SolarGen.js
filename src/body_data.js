@@ -113,7 +113,7 @@ const GasPlanetData = {
     min_disp_rad : 12,
     max_disp_rad : 20,
     density : 1.33,
-    pcolor : '#ff00aa',
+    pcolor : '#ff0000',
     scolor : '#0000ff',
     min_orbit : 180,
     max_orbit : 300,
