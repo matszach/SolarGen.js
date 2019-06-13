@@ -1,14 +1,3 @@
-// html elements
-const ctx = document.getElementById("main_cvs").getContext('2d');
-
-function clearCanvas(){
-    ctx.clearRect(0, 0, 640, 640);
-}
-
-function drawBackground(){
-    ctx.fillStyle = '#000000';
-    ctx.fillRect(0,0,640,640);
-}
 
 // parent class to all celestial bodies
 class CelestialBody{
@@ -42,14 +31,14 @@ class CelestialBody{
     draw(){
         ctx.beginPath();
         var grd = ctx.createLinearGradient(
-            320 + this.x - this.radius*this.disp_size_mod,
-            320 + this.y - this.radius*this.disp_size_mod,
-            320 + this.x + this.radius*this.disp_size_mod,
-            320 + this.y + this.radius*this.disp_size_mod);
+            cvs_side/2 + this.x - this.radius*this.disp_size_mod,
+            cvs_side/2 + this.y - this.radius*this.disp_size_mod,
+            cvs_side/2 + this.x + this.radius*this.disp_size_mod,
+            cvs_side/2 + this.y + this.radius*this.disp_size_mod);
         grd.addColorStop(0, this.pcolor); 
         grd.addColorStop(1, this.scolor); 
         ctx.fillStyle = grd;
-        ctx.arc(320+this.x, 320+this.y, this.radius*this.disp_size_mod, 0, 2 * Math.PI);
+        ctx.arc(cvs_side/2+this.x, cvs_side/2+this.y, this.radius*this.disp_size_mod, 0, 2 * Math.PI);
         ctx.fill();
     }
 

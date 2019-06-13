@@ -1,3 +1,11 @@
+// html elements
+const ctx = document.getElementById("main_cvs").getContext('2d');
+
+function drawBackground(){
+    ctx.fillStyle = '#000000';
+    ctx.fillRect(0,0,cvs_side,cvs_side);
+    ctx.fillStyle = '#ffffff';
+}
 
 let central_body;
 
@@ -22,7 +30,6 @@ function init(){
 
 
 function main(){
-    clearCanvas();
     drawBackground();
     central_body.draw();
     central_body.handle_satelites();

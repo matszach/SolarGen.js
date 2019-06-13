@@ -89,8 +89,29 @@ const IcyPlanetData = {
     max_pop : 100000000
 }
 
+const ForrestPlanetData = {
+    name : 'forrest planet',
+    min_temp : 290,
+    max_temp : 310,
+    min_real_rad : 4.5,
+    max_real_rad : 10,
+    min_disp_rad : 11,
+    max_disp_rad : 14,
+    min_mass : 2.5,
+    max_mass : 10,
+    pcolor : '#00ff00',
+    scolor : '#0000ff',
+    min_orbit : 100,
+    max_orbit : 200,
+    min_vel : 0.002, 
+    max_vel : 0.010,
+    pop_chance : 0.7,
+    min_pop : 1000000000,
+    max_pop : 200000000000
+}
+
 function randPlanetData(){
-    var data = [RockyPlanetData, IcyPlanetData];
+    var data = [RockyPlanetData, IcyPlanetData, ForrestPlanetData];
     return data[Math.floor(Math.random()*data.length)]
 }
 
@@ -137,7 +158,28 @@ const IcyMoonData = {
     max_pop : 1000000
 }
 
+const ForrestMoonData = {
+    name : 'forrest planet',
+    min_temp : 290,
+    max_temp : 310,
+    min_real_rad : 1.5,
+    max_real_rad : 2.5,
+    min_disp_rad : 2,
+    max_disp_rad : 5,
+    min_mass : 1,
+    max_mass : 3,
+    pcolor : '#00dd00',
+    scolor : '#0000dd',
+    min_orbit : 20,
+    max_orbit : 50,
+    min_vel : 0.002, 
+    max_vel : 0.007,
+    pop_chance : 0.2,
+    min_pop : 10000000,
+    max_pop : 2000000000
+}
+
 function randMoonData(){
-    var data = [RockyMoonData, IcyMoonData];
+    var data = [RockyMoonData, IcyMoonData, ForrestMoonData];
     return data[Math.floor(Math.random()*data.length)]
 }
