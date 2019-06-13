@@ -104,8 +104,28 @@ const ForrestPlanetData = {
     max_pop : 200000000000
 }
 
+const GasPlanetData = {
+    name : 'gas planet',
+    min_temp : 120,
+    max_temp : 400,
+    min_real_rad : 5,
+    max_real_rad : 90,
+    min_disp_rad : 12,
+    max_disp_rad : 20,
+    density : 1.33,
+    pcolor : '#ff00aa',
+    scolor : '#0000ff',
+    min_orbit : 180,
+    max_orbit : 300,
+    min_vel : 0.0003, 
+    max_vel : 0.0008,
+    pop_chance : 0.01,
+    min_pop : 1,
+    max_pop : 1000000
+}
+
 function randPlanetData(){
-    var data = [RockyPlanetData, IcyPlanetData, ForrestPlanetData];
+    var data = [RockyPlanetData, IcyPlanetData, ForrestPlanetData, GasPlanetData];
     return data[Math.floor(Math.random()*data.length)]
 }
 
